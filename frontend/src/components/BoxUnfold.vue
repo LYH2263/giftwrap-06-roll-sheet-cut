@@ -4,6 +4,9 @@ defineProps({
   w: { type: Number, default: 0 },
   h: { type: Number, default: 0 },
   paperM2: { type: Number, default: null },
+  rollWidth: { type: Number, default: null },
+  sheetLen: { type: Number, default: null },
+  sheets: { type: Number, default: null },
 })
 </script>
 
@@ -27,6 +30,12 @@ defineProps({
     </p>
     <p v-else class="stat-line">
       外形 {{ Number(l).toFixed(2) }} × {{ Number(w).toFixed(2) }} × {{ Number(h).toFixed(2) }} m
+    </p>
+    <p v-if="sheetLen != null" class="stat-line cut-line">
+      本次下料长 <strong>{{ Number(sheetLen).toFixed(3) }}</strong> m
+      <template v-if="rollWidth != null">
+        （卷宽 {{ Number(rollWidth).toFixed(2) }} m<template v-if="sheets != null"> · {{ sheets }} 张</template>）
+      </template>
     </p>
   </div>
 </template>

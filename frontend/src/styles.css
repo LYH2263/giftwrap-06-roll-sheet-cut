@@ -581,3 +581,29 @@ button.ribbon:hover {
     padding-top: 0.5rem;
   }
 }
+
+/* —— 卷宽下料 —— */
+.roll-input {
+  width: 5.5rem;
+  margin: 0 0.25rem;
+  padding: 0.2rem 0.4rem;
+  font: inherit;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.roll-input:focus {
+  outline: none;
+  border-color: var(--wash-b);
+}
+
+.paper-tile .btn {
+  margin-top: 0.5rem;
+}
+
+.cut-line strong {
+  color: var(--wash-b);
+  font-weight: 700;
+}

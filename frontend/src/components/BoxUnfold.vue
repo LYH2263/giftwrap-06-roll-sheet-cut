@@ -4,6 +4,7 @@ defineProps({
   w: { type: Number, default: 0 },
   h: { type: Number, default: 0 },
   paperM2: { type: Number, default: null },
+  sheetLen: { type: Number, default: null },
 })
 </script>
 
@@ -24,6 +25,9 @@ defineProps({
     </svg>
     <p v-if="paperM2 != null" class="stat-line">
       估算用纸 <strong>{{ Number(paperM2).toFixed(4) }}</strong> m²（含折边系数）
+      <span v-if="sheetLen != null" class="cut-tag">
+        本次下料长 <strong>{{ Number(sheetLen).toFixed(4) }}</strong> m（单张长按 1m）
+      </span>
     </p>
     <p v-else class="stat-line">
       外形 {{ Number(l).toFixed(2) }} × {{ Number(w).toFixed(2) }} × {{ Number(h).toFixed(2) }} m

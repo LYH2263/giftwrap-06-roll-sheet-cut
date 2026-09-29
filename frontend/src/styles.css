@@ -500,6 +500,50 @@ button.ribbon:hover {
   font-size: 0.92rem;
 }
 
+.cut-tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+input[type='number'],
+input[type='text'] {
+  font: inherit;
+  min-width: 7rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+}
+
+.cut-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: 0.4rem 0 0.2rem;
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cut-line strong {
+  color: var(--ink);
+}
+
+.verify-ok {
+  color: #1d6b4f;
+  font-weight: 600;
+}
+
+.verify-bad {
+  color: #c23d5a;
+  font-weight: 600;
+}
+
 @keyframes brandIn {
   from {
     opacity: 0;
